@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Sensores do Galaxy A55</h1>
+  <button id="btn">Listar sensores</button>
+  <ul id="lista"></ul>
+
+  <script>
+    const sensores = ['acelerômetro', 'giroscópio', 'NFC', 'impressão digital']
+    const botao = document.getElementById('btn')
+    const lista = document.getElementById('lista')
+
+    botao.addEventListener('click', () => {
+      lista.innerHTML = ''
+      sensores.forEach((sensor) => {
+        const li = document.createElement('li')
+        li.textContent = sensor
+        lista.appendChild(li)
+      })
+    })
+  </script>
+</body>
+</html>
